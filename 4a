@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>4a</title>
+</head>
+<body>
+    <form>
+     <h1> online Movie Tickets Booking</h1>
+     <label>Row A</label><br>	
+     <script>
+        for(i=1;i<=10;i++)
+        {
+        document.write("<input type='checkbox' name='alane' value="+i+">SeatNo"+i);
+        }
+     </script><br><br>
+     <label>Row B</label><br>
+     <script>
+        for(i=1;i<=10;i++)
+        {
+        document.write("<input type='checkbox' name='blane' value="+i+">SeatNo"+i);
+        }
+     </script>
+      <br>
+     <input type="submit" value="Book Tickets"
+      onclick="return confirmtickets()">  
+      <p id="result"></p>
+    </form>
+    <script>
+    function confirmtickets()
+    {
+    alane=document.getElementsByName("alane");
+    blane=document.getElementsByName("blane");
+    output=document.getElementById("result");
+    var alaneflag=0; var blaneflag=0;
+    for(x in alane)
+    {
+      if(alane[x].checked)
+      {
+        alaneflag+=1;
+      }
+    }
+    for(x in blane)
+    {
+      if(blane[x].checked)
+      {
+        blaneflag+=1;
+      }
+    }
+    if(alaneflag==0 && blaneflag==0)
+    {
+      window.alert("Please select seat no of a lane respectivly");
+    }
+    else
+    {
+    totaltickets=alaneflag+blaneflag;
+    totalamount=totaltickets*150;	
+    discountamount=totalamount*10/100;
+    totalamount=totalamount-discountamount;
+    output.innerHTML="Your Seats are bookked Sucessfulyy<br>and Total Amount after discount"+totalamount;
+    }
+    return false;
+    }
+    </script>
+    </body>
+    

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>4a</title>
+</head>
+<body>
+	<center>
+			<br>
+			<script type="text/javascript">
+				function decider()
+				 {
+					const COST_PER_TICKET = 150;
+					let numOfTickets = prompt("Enter the number of tickets you want to book:");
+					numOfTickets = parseInt(numOfTickets);
+					totalPrice=numOfTickets*COST_PER_TICKET;
+					if (isNaN(numOfTickets) || numOfTickets < 1) 
+					{
+	  					alert("Invalid input. Please enter a valid number.");
+					} 
+					else if (numOfTickets > 5) 
+					{
+	 			 		document.write("Sorry, booking is not allowed for more than 5 tickets.");
+					} 
+					else 
+					{
+	  					const totalPrice = numOfTickets * COST_PER_TICKET;
+	  					document.write("Total price: Rs"+totalPrice);
+	  					
+					}
+				}
+				decider();
+				
+
+	</script>
+</body>
+</html>

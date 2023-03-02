@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>4c</title>
+</head>
+<body>
+	<div class="container">
+      	<h1>Movie Ticket Booking</h1>
+      	<label for="num-of-tickets">Number of tickets:</label>
+      	<input type="number" id="num-of-tickets" name="num-of-tickets">
+      	<button id="submit-btn">Submit</button>
+    </div>
+    <script>t
+		const COST_PER_TICKET = 150;
+		const numOfTicketsInput = document.getElementById("num-of-tickets");
+		const submitBtn = document.getElementById("submit-btn");
+		submitBtn.addEventListener("click", () => 
+		{
+	    const numOfTickets = parseInt(numOfTicketsInput.value);
+	    if (isNaN(numOfTickets) || numOfTickets < 1) 
+	    {
+	    	alert("Invalid input. Please enter a valid number.");
+	  	} 
+	  	else if (numOfTickets > 5) 
+	  	{
+	    	alert("Sorry, booking is not allowed for more than 5 tickets.");
+	    } 
+	    else 
+	    {
+	    	const totalPrice = numOfTickets * COST_PER_TICKET;
+	    	document.write("Total price: Rs."+totalPrice);
+	    }
+	   });
+</script>
+</body>
+</html>

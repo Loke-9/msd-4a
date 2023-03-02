@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>4b</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Person 
+		{
+  			constructor(name, age) 
+  			{
+    			this.name = name;
+    			this.age = age;
+  			}
+		}
+
+		class Employee extends Person 
+		{
+		  constructor(name, age, role) 	
+		  {
+    		super(name, age);
+    		this.role = role;
+  		  }
+		}
+		const employee1 = new Employee('Jash', 30, 'Manager');
+		document.write(employee1.name);
+		document.write(" ",employee1.age); 
+		document.write("  ",employee1.role);
+	</script>
+</body>
+</html>
